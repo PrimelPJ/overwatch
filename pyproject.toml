@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "overwatch"
+version = "0.1.0"
+description = "Threat Intelligence & SOAR Platform"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Primel Jayawardana", email = "primelpj21@gmail.com"}]
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+asyncio_mode = "auto"
