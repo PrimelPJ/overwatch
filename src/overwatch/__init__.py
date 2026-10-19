@@ -15,6 +15,9 @@ from overwatch.feed_ingestion import FeedIngestionEngine
 from overwatch.enrichment import EnrichmentPipeline
 from overwatch.playbook import PlaybookExecutor
 from overwatch.deduplication import AlertDeduplicator
+from overwatch.ioc_store import IOCStore
+from overwatch.correlation import CorrelationEngine, Campaign
+from overwatch.alert_pipeline import AlertPipeline, RawAlert, build_pipeline
 
 __all__ = [
     "IOC",
@@ -28,6 +31,12 @@ __all__ = [
     "EnrichmentPipeline",
     "PlaybookExecutor",
     "AlertDeduplicator",
+    "IOCStore",
+    "CorrelationEngine",
+    "Campaign",
+    "AlertPipeline",
+    "RawAlert",
+    "build_pipeline",
 ]
 
 __version__ = "0.1.0"
