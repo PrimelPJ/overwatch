@@ -18,6 +18,9 @@ from overwatch.deduplication import AlertDeduplicator
 from overwatch.ioc_store import IOCStore
 from overwatch.correlation import CorrelationEngine, Campaign
 from overwatch.alert_pipeline import AlertPipeline, RawAlert, build_pipeline
+from overwatch.taxii_client import TaxiiClient, TaxiiVersion, TaxiiCollection
+from overwatch.ioc_aging import IOCAgingEngine, AgingPolicy, AgingResult
+from overwatch.mitre_mapper import MITREMapper, AttackTechnique, TechniqueMapping
 
 __all__ = [
     "IOC",
@@ -37,6 +40,15 @@ __all__ = [
     "AlertPipeline",
     "RawAlert",
     "build_pipeline",
+    "TaxiiClient",
+    "TaxiiVersion",
+    "TaxiiCollection",
+    "IOCAgingEngine",
+    "AgingPolicy",
+    "AgingResult",
+    "MITREMapper",
+    "AttackTechnique",
+    "TechniqueMapping",
 ]
 
 __version__ = "0.1.0"
