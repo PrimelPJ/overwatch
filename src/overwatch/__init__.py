@@ -21,6 +21,16 @@ from overwatch.alert_pipeline import AlertPipeline, RawAlert, build_pipeline
 from overwatch.taxii_client import TaxiiClient, TaxiiVersion, TaxiiCollection
 from overwatch.ioc_aging import IOCAgingEngine, AgingPolicy, AgingResult
 from overwatch.mitre_mapper import MITREMapper, AttackTechnique, TechniqueMapping
+from overwatch.threat_hunt import (
+    ThreatHunter,
+    HuntQuery,
+    HuntHypothesis,
+    HuntSession,
+    HuntStatus,
+    HypothesisOutcome,
+    IOCCluster,
+    TemporalPattern,
+)
 
 __all__ = [
     "IOC",
@@ -49,6 +59,14 @@ __all__ = [
     "MITREMapper",
     "AttackTechnique",
     "TechniqueMapping",
+    "ThreatHunter",
+    "HuntQuery",
+    "HuntHypothesis",
+    "HuntSession",
+    "HuntStatus",
+    "HypothesisOutcome",
+    "IOCCluster",
+    "TemporalPattern",
 ]
 
 __version__ = "0.1.0"
