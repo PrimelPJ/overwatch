@@ -31,6 +31,14 @@ from overwatch.threat_hunt import (
     IOCCluster,
     TemporalPattern,
 )
+from overwatch.case_manager import (
+    CaseManager,
+    InvestigationCase,
+    CaseState,
+    CasePriority,
+    TimelineEvent,
+    Evidence,
+)
 
 __all__ = [
     "IOC",
@@ -67,6 +75,12 @@ __all__ = [
     "HypothesisOutcome",
     "IOCCluster",
     "TemporalPattern",
+    "CaseManager",
+    "InvestigationCase",
+    "CaseState",
+    "CasePriority",
+    "TimelineEvent",
+    "Evidence",
 ]
 
 __version__ = "0.1.0"
