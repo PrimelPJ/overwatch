@@ -39,6 +39,16 @@ from overwatch.case_manager import (
     TimelineEvent,
     Evidence,
 )
+from overwatch.threat_graph import (
+    ThreatGraph,
+    GraphBuilder,
+    GraphNode,
+    GraphEdge,
+    NodeType,
+    RelationType,
+    PageRankResult,
+    PathResult,
+)
 
 __all__ = [
     "IOC",
@@ -81,6 +91,14 @@ __all__ = [
     "CasePriority",
     "TimelineEvent",
     "Evidence",
+    "ThreatGraph",
+    "GraphBuilder",
+    "GraphNode",
+    "GraphEdge",
+    "NodeType",
+    "RelationType",
+    "PageRankResult",
+    "PathResult",
 ]
 
 __version__ = "0.1.0"
