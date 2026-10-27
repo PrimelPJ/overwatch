@@ -39,6 +39,7 @@ from overwatch.case_manager import (
     TimelineEvent,
     Evidence,
 )
+from overwatch.api_server import create_app
 from overwatch.threat_graph import (
     ThreatGraph,
     GraphBuilder,
@@ -99,6 +100,7 @@ __all__ = [
     "RelationType",
     "PageRankResult",
     "PathResult",
+    "create_app",
 ]
 
 __version__ = "0.1.0"
