@@ -175,6 +175,15 @@ class IOC:
         return mapping.get(self.ioc_type, f"[{self.ioc_type.value}:value = '{self.value}']")
 
 
+class AlertStatus(str, Enum):
+    NEW = "new"
+    IN_PROGRESS = "in_progress"
+    ESCALATED = "escalated"
+    RESOLVED = "resolved"
+    CLOSED = "closed"
+    FALSE_POSITIVE = "false_positive"
+
+
 @dataclass
 class AlertTriage:
     """Triaged alert with enrichment and response actions."""
