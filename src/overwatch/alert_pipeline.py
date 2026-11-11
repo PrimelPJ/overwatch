@@ -256,7 +256,7 @@ class AlertPipeline:
             actions.append(PlaybookAction.QUARANTINE_HOST)
             actions.append(PlaybookAction.COLLECT_FORENSICS)
 
-        if IOCType.FILE_HASH_SHA256 in matched_types or IOCType.FILE_HASH_MD5 in matched_types:
+        if matched_types & {IOCType.FILE_HASH_SHA256, IOCType.FILE_HASH_MD5, IOCType.FILE_HASH_SHA1}:
             actions.append(PlaybookAction.COLLECT_FORENSICS)
 
         if IOCType.EMAIL in matched_types:
