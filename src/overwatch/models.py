@@ -27,6 +27,7 @@ class IOCType(str, Enum):
     NETWORK_TRAFFIC = "network-traffic"
     USER_AGENT = "user-agent"
     CVE = "vulnerability"
+    CERTIFICATE = "x509-certificate"
 
 
 class Severity(str, Enum):
