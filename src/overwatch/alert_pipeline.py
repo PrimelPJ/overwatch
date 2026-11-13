@@ -262,6 +262,10 @@ class AlertPipeline:
         if IOCType.EMAIL in matched_types:
             actions.append(PlaybookAction.RESET_CREDENTIALS)
 
+        if IOCType.CERTIFICATE in matched_types:
+            actions.append(PlaybookAction.BLOCK_DOMAIN)
+            actions.append(PlaybookAction.NOTIFY_SOC)
+
         # Deduplicate while preserving order
         seen: set = set()
         result.triage.recommended_actions = [
