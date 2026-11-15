@@ -21,6 +21,10 @@ from overwatch.models import AlertTriage, IOC, IOCType, PlaybookAction, Severity
 
 logger = logging.getLogger(__name__)
 
+DEFAULT_MAX_IOC_MATCHES = 20
+DEFAULT_PIPELINE_TIMEOUT_MS = 5000   # 5 s end-to-end budget per alert
+PIPELINE_STAGE_TIMEOUT_MS = 1500     # 1.5 s per-stage deadline
+
 
 class PipelineStage(str, Enum):
     IOC_MATCH = "ioc_match"
@@ -28,6 +32,7 @@ class PipelineStage(str, Enum):
     DEDUPLICATION = "deduplication"
     SEVERITY_SCORE = "severity_score"
     PLAYBOOK_DISPATCH = "playbook_dispatch"
+    CORRELATION = "correlation"
 
 
 @dataclass
