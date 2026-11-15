@@ -32,6 +32,7 @@ class PipelineStage(str, Enum):
     DEDUPLICATION = "deduplication"
     SEVERITY_SCORE = "severity_score"
     PLAYBOOK_DISPATCH = "playbook_dispatch"
+    CORRELATION = "correlation"
 
 
 @dataclass
