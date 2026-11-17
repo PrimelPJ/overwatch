@@ -16,6 +16,9 @@ from overwatch.models import IOC, IOCType, Severity, TLPLevel
 
 logger = logging.getLogger(__name__)
 
+DEFAULT_MAX_STORE_SIZE = 100_000
+DEFAULT_GC_INTERVAL = 300  # seconds
+
 
 class IOCStore:
     """
