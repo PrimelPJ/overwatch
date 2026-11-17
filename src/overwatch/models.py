@@ -28,6 +28,8 @@ class IOCType(str, Enum):
     USER_AGENT = "user-agent"
     CVE = "vulnerability"
     CERTIFICATE = "x509-certificate"
+    JARM = "jarm-fingerprint"
+    ASN = "autonomous-system"
 
 
 class Severity(str, Enum):
