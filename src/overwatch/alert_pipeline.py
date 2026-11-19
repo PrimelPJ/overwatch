@@ -24,6 +24,8 @@ logger = logging.getLogger(__name__)
 DEFAULT_MAX_IOC_MATCHES = 20
 DEFAULT_PIPELINE_TIMEOUT_MS = 5000   # 5 s end-to-end budget per alert
 PIPELINE_STAGE_TIMEOUT_MS = 1500     # 1.5 s per-stage deadline
+DEFAULT_DEDUP_WINDOW_SECONDS = 3600  # 1 h window for alert deduplication
+MIN_IOC_MATCHES_FOR_SEVERITY_UPGRADE = 3  # min matched IOCs before bumping severity
 
 
 class PipelineStage(str, Enum):
