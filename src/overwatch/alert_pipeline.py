@@ -26,6 +26,7 @@ DEFAULT_PIPELINE_TIMEOUT_MS = 5000   # 5 s end-to-end budget per alert
 PIPELINE_STAGE_TIMEOUT_MS = 1500     # 1.5 s per-stage deadline
 DEFAULT_DEDUP_WINDOW_SECONDS = 3600  # 1 h window for alert deduplication
 MIN_IOC_MATCHES_FOR_SEVERITY_UPGRADE = 3  # min matched IOCs before bumping severity
+DEFAULT_BATCH_CONCURRENCY = 8        # max concurrent alerts in process_batch
 
 
 class PipelineStage(str, Enum):
@@ -144,7 +145,7 @@ class AlertPipeline:
         return await loop.run_in_executor(None, self.process, raw)
 
     async def process_batch(
-        self, raws: List[RawAlert], concurrency: int = 8
+        self, raws: List[RawAlert], concurrency: int = DEFAULT_BATCH_CONCURRENCY
     ) -> List[PipelineResult]:
         """Process a batch of alerts with bounded concurrency."""
         sem = asyncio.Semaphore(concurrency)
