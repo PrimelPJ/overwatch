@@ -30,6 +30,9 @@ class IOCType(str, Enum):
     CERTIFICATE = "x509-certificate"
     JARM = "jarm-fingerprint"
     ASN = "autonomous-system"
+    MAC_ADDRESS = "mac-addr"
+    BITCOIN_ADDRESS = "cryptocurrency-wallet"
+    PROCESS_NAME = "process"
 
 
 class Severity(str, Enum):
